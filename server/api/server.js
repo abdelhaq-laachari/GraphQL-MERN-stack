@@ -1,12 +1,16 @@
 const express = require("express"); // import express
 var { graphqlHTTP } = require('express-graphql');
 const dotenv = require("dotenv").config(); // import dotenv
+const colors = require("colors"); // import colors
 const port = process.env.PORT || 6000; // set our port
 const schema = require('./schema/schema'); // import schema
 var { buildSchema } = require('graphql');
+const connectDB = require("./config/db"); // import db connection
 const app = express();
 
 
+// Connect Database
+connectDB();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
