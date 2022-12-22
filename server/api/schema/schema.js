@@ -93,7 +93,7 @@ const mutation = new GraphQLObjectType({
     updateClient: {
       type: ClientType,
       args: {
-        id: { type: GraphQLID },
+        id: { type: GraphQLNonNull(GraphQLID) },
         fullName: { type: GraphQLString },
         email: { type: GraphQLString },
         phoneNumber: { type: GraphQLString },
