@@ -1,0 +1,29 @@
+.home-page {
+    background-image: url('../../assets/bg.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+  }
+  
+  .button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .text {
+    width: 50%;
+    color: white;
+    font-size: 0.9rem;
+  }
+  
