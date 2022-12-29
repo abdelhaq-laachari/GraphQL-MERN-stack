@@ -1,6 +1,7 @@
 import { useMutation } from "@apollo/client";
 import { DELETE_CLIENT, ADD_CLIENT } from "../../mutation/clientMutations";
 import { GET_CLIENT } from "../../queries/clientQueries";
+import Update from "../../components/add/Update";
 
 export default function ClientRow({ client }) {
   const [deleteClient] = useMutation(DELETE_CLIENT, {
@@ -19,16 +20,14 @@ export default function ClientRow({ client }) {
       <td className="py-4 px-6">{client.fullName}</td>
       <td className="py-4 px-6">{client.email}</td>
       <td className="py-4 px-6">{client.phoneNumber}</td>
-      <td className="py-4 px-6 space-x-3">
+      <td className="py-4 px-6 flex space-x-3">
         <button
           onClick={deleteClient}
           className="bg-red-500 hover:bg-red-700 text-white text-sm font-bold py-2 px-4 rounded"
         >
           Delete
         </button>
-        <button className="bg-yellow-500 hover:bg-yellow-700 text-white text-sm font-bold py-2 px-4 rounded">
-          Update
-        </button>
+        <Update client={client} />
       </td>
     </tr>
   );

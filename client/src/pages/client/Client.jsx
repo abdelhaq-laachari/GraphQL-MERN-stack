@@ -20,12 +20,6 @@ function Client() {
             <h1 className="text-2xl text-gray-700 dark:text-gray-200">
               Client List
             </h1>
-            {/* small button */}
-            {/* <Link to="/client/add">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded">
-                Add Client
-              </button>
-            </Link> */}
             <Modal/>
           </div>
           <table className="w-3/4 text-sm text-left text-gray-500 dark:text-gray-400">
