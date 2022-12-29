@@ -1,5 +1,5 @@
 import React from "react";
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { GET_CLIENT } from "../../queries/clientQueries";
 import ClientRow from "./ClientRows";
 import Spinner from "../../components/spinner/Spinner";
@@ -24,18 +24,18 @@ function Client() {
             </button>
           </div>
           <table className="w-3/4 text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                <th scope="col" class="py-3 px-6">
+                <th scope="col" className="py-3 px-6">
                   Full name
                 </th>
-                <th scope="col" class="py-3 px-6">
+                <th scope="col" className="py-3 px-6">
                   Email
                 </th>
-                <th scope="col" class="py-3 px-6">
+                <th scope="col" className="py-3 px-6">
                   Phone Number
                 </th>
-                <th scope="col" class="py-3 px-6">
+                <th scope="col" className="py-3 px-6">
                   Action
                 </th>
               </tr>
